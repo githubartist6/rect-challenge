@@ -12,7 +12,7 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Challenge />} />
+        <Route path="/rect-challenge" element={<Challenge />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<RegisterForm />} />
       </Routes>

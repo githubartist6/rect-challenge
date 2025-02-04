@@ -12,7 +12,7 @@ export const Navbar = () => {
 
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
 
-        <Link to="/">
+        <Link to="rect-challenge">
           Home
         </Link>
 
