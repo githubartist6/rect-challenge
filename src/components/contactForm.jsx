@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import "./registerForm.css";
 
-export const Login = () => {
+export const ContactForm = () => {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    age: "",
-    village: "",
-    district: "",
+    name: "",
     phone: "",
-    password: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -20,20 +16,25 @@ export const Login = () => {
     e.preventDefault();
     console.log("Form Data Submitted:", formData);
     setFormData({
-      firstName: "",
-      lastName: "",
-      age: "",
-      village: "",
-      district: "",
+      name: "",
       phone: "",
-      password: "",
+      message: "",
     });
   };
 
   return (
     <div className="form-container">
-      <h2>Login Form</h2>
+      <h2>Contact Form</h2>
       <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={formData.name}
+          onChange={handleChange}
+          title="Name"
+          required 
+          />
 
         <input
           type="tel"
@@ -45,14 +46,13 @@ export const Login = () => {
           required 
           />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
+        <textarea
+          name="message"
+          placeholder="Message"
+          value={formData.message}
           onChange={handleChange}
-          title="password"
-          required 
+          title="message"
+          required
           />
 
         <button type="submit">Register</button>

@@ -6,23 +6,33 @@ import "./navbar.css";
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeMenu = () => setMenuOpen(false);
+
   return (
     <nav className="navbar">
       <div className="navbar-logo">SSZ</div>
 
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
-
-        <Link to="rect-challenge">
-          Home
-        </Link>
-
-        <Link to="login">
-          Login
-        </Link>
-
-        <Link to="signup">
-          Register
-        </Link>
+        <li>
+          <Link to="rect-challenge" onClick={closeMenu}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="login" onClick={closeMenu}>
+            Login
+          </Link>
+        </li>
+        <li>
+          <Link to="signup" onClick={closeMenu}>
+            Register
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" onClick={closeMenu}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* Toggle Button */}

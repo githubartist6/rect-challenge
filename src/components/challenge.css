@@ -69,8 +69,12 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 600px) {
 
+  .challenge {
+    top: 12%;
+  }
+
   .container-box {
-    top: 60%;
+    top: 62%;
     width: 80%;
     padding: 15px;
   }
