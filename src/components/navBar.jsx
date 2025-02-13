@@ -10,7 +10,7 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="navbar-logo">SSZ</div>
+      <div className="navbar-logo">JkCODER01</div>
 
       <ul className={`navbar-links ${menuOpen ? "active" : ""}`}>
         <li>
@@ -26,6 +26,11 @@ export const Navbar = () => {
         <li>
           <Link to="signup" onClick={closeMenu}>
             Register
+          </Link>
+        </li>
+        <li>
+          <Link to="pokmon" onClick={closeMenu}>
+            Pokmon
           </Link>
         </li>
         <li>
